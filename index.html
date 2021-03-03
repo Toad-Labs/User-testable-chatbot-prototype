@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <!-- Load closure template scripts -->
+		<script src="https://ssl-templates.services.gc.ca/app/cls/wet/gcweb/v4_0_39/cdts/compiled/soyutils.js"></script>
+		<script src="https://ssl-templates.services.gc.ca/app/cls/wet/gcweb/v4_0_39/cdts/compiled/wet-en.js"></script>
+		<noscript>
+			<!-- Write closure fall-back static file -->
+			<!-- /ROOT/app/cls/WET/gcweb/v4_0_39/cdts/static/refTop.html -->
+		</noscript>
+		<!-- Write closure template -->
+		<script>
+			document.write(wet.builder.refTop({
+				"cdnEnv": "esdcprod",
+				"isApplication": true
+			}));
+		</script>
+  </head>
+  <body>
+    <div id="def-top">
+			<!-- Write closure fall-back static file -->
+			<!-- /ROOT/app/cls/WET/gcweb/v4_0_39/cdts/static/appTop-en.html -->
+		</div>
+		<!-- Write closure template -->
+		<script>
+			var defTop = document.getElementById("def-top");
+			defTop.outerHTML = wet.builder.appTop({
+				"cdnEnv": "esdcprod",
+				"appName": [{"text": "My Service Canada", "href": "#"}],
+				"lngLinks": [{"lang": "fr",	"href": "apptop-fr.shtml", "text": "Français"}]
+			});
+		</script>
+
+    <main property="mainContentOfPage" typeof="WebPageElement" class="container">
+
+      <!-- Actual VueJS app goes in here -->
+      <div id="app"></div>
+
+      <div id="def-preFooter">
+        <!-- Write closure fall-back static file -->
+        <!-- /ROOT/app/cls/WET/gcweb/v4_0_39/cdts/static/preFooter-en.html -->
+      </div>
+      <!-- Write closure template -->
+      <script>
+        var defPreFooter = document.getElementById("def-preFooter");
+        defPreFooter.outerHTML = wet.builder.preFooter({
+          "cdnEnv": "esdcprod",
+          "dateModified": "2019-07-31"
+        });
+      </script>
+    </main>
+
+
+    <div id="def-footer">
+			<!-- Write closure fall-back static file -->
+			<!-- /ROOT/app/cls/WET/gcweb/v4_0_39/cdts/static/appFooter-en.html -->
+		</div>
+		<!-- Write closure template -->
+		<script>
+			var defFooter = document.getElementById("def-footer");
+			defFooter.outerHTML = wet.builder.appFooter({
+				"cdnEnv": "esdcprod",
+				"footerSections": [{
+					"href": "#",
+					"text": "Portal footer link 1"
+				}, {
+					"href": "#",
+					"text": "Portal footer link 2"
+				}, {
+					"href": "#",
+					"text": "Portal footer link 3",
+					"newWindow": true
+				}, {
+					"href": "#",
+					"text": "Portal footer link 4"
+				}, {
+					"href": "#",
+					"text": "Portal footer link 5"
+				}, {
+					"href": "#",
+					"text": "Portal footer link 6"
+				}, {
+					"href": "#",
+					"text": "Portal footer link 7"
+				}, {
+					"href": "#",
+					"text": "Portal footer link 8"
+				}, {
+					"href": "#",
+					"text": "Portal footer link 9"
+				}],
+				"showFeatures": false
+			});
+		</script>
+
+
+		<!-- Write closure template -->
+		<script>
+			document.write(wet.builder.refFooter({
+				"cdnEnv": "esdcprod",
+				"isApplication": true
+			}));
+    </script>
+
+    <!-- Load VueJS App -->
+    <script type="module" src="/src/main.js"></script>
+
+  </body>
+</html>
