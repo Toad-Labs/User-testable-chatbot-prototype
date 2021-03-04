@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="tw-h-screen tw-my-10 tw-flex tw-flex-row tw-items-stretch">
+    <div class="tw-my-10 tw-flex tw-flex-row tw-items-stretch" style="height: 50vh; min-height: 25rem;">
       <!-- List of conversations -->
       <!-- TODO: Pass in messages and the user id -->
       <chat-window-list />
