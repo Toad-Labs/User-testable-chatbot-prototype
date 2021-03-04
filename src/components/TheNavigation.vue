@@ -47,8 +47,13 @@
                  hover:tw-bg-gray-100 hover:tw-text-blue-800 hover:tw-no-underline
                    tw-no-underline">
           <div class="tw-px-12 tw-pt-3 tw-pb-5 tw-flex tw-flex-col tw-items-center tw-text-white hover:tw-text-blue-800">
-            <svg class="tw-w-10 tw-h-10 tw-fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path d="M412.055,63.632H99.914L0.013,252.125v196.243h511.975V252.125L412.055,63.632z M390.368,252.125  l-39.264,58.028H154.849l-39.248-58.028H65.76l72.684-141.089h235.113l72.669,141.089H390.368L390.368,252.125z"></path></svg>
-            <span class="tw-text-sm tw-no-underline" style="text-decoration:none !important;">Inbox {{ hasOpenedInbox }}</span>
+            <span class="tw-relative tw-inline-block tw-w-10 tw-h-10">
+              <svg class="tw-w-10 tw-h-10 tw-fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path d="M412.055,63.632H99.914L0.013,252.125v196.243h511.975V252.125L412.055,63.632z M390.368,252.125  l-39.264,58.028H154.849l-39.248-58.028H65.76l72.684-141.089h235.113l72.669,141.089H390.368L390.368,252.125z"></path></svg>
+              <span
+                v-if="hasOpenedInbox === false"
+                class="tw-absolute tw-top-0 tw-right-0 tw-inline-flex tw-items-center tw-justify-center tw-px-2 tw-py-1 tw-text-xl tw-font-bold tw-leading-none tw-text-red-100 tw-transform tw-translate-x-1/2 tw--translate-y-1/2 tw-bg-red-600 tw-rounded-full">1</span>
+            </span>
+            <span class="tw-mt-0 tw-text-sm tw-no-underline" style="text-decoration:none !important;">Inbox</span>
           </div>
         </router-link>
 
