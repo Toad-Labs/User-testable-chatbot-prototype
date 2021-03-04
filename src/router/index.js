@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/Home.vue';
 
+const Inbox = () => import('../views/Inbox.vue');
 const NotFound = () => import('../views/NotFound.vue');
 const ControllerPage = () => import('../views/Controller.vue');
 
@@ -12,7 +13,13 @@ export const router = createRouter({
         component: HomePage,
       },
       {
+        path: '/inbox',
+        name: 'inbox',
+        component: Inbox,
+      },
+      {
         path: '/controller',
+        name: 'controller',
         component: ControllerPage,
       },
       {
