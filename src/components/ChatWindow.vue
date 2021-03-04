@@ -7,7 +7,7 @@
 
       <!-- List of messages -->
       <!-- TODO: Pass in messages and the user id -->
-      <chat-window-messages />
+      <chat-window-messages :userId="userId" />
     </div>
 
   </div>
@@ -30,7 +30,7 @@ export default {
   },
   setup (props) {
 
-    console.log(props.userId);
+
 
 
   }
