@@ -1,7 +1,7 @@
 <template>
   <div class="tw-w-2/3 tw-h-full tw-bg-gray-50 tw-flex tw-flex-col tw-justify-end">
     <!-- Chat log -->
-    <div class=" tw-overflow-y-auto">
+    <div class="my-chat-messages tw-overflow-y-auto">
 
       <div
         v-for="(message, index) in messages"
@@ -62,8 +62,6 @@ export default {
     }
   },
   setup (props) {
-
-    console.log('Chat wind user Id', props.userId);
 
     const { error, messages, messageBoxContent, sendMessageHandler } = useChatMessages(props.userId)
 
@@ -137,8 +135,15 @@ function useChatMessages(userId) {
 
   // Handler all messages that are posted
   channel.subscribe('message', function(message) {
-    console.log("Message received", message);
 
+
+
+    // Cache the chat message block
+    var chatMessagesContainer =  document.querySelector('.my-chat-messages');
+
+    console.log('B4: scroll top:', chatMessagesContainer.scrollTop , 'B4: scroll height', chatMessagesContainer.scrollHeight  );
+
+    // Response adapter for the received message
     var receivedMessage = {
       text: message.data.text,
       userId: message.data.userId,
@@ -146,6 +151,14 @@ function useChatMessages(userId) {
 
     // Add the message to the message stack
     state.messages.push(receivedMessage);
+
+    // Scroll to the bottom of the container
+    setTimeout(function() {
+      chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
+    }, 50);
+
+
+    //console.log('scroll top:', chatMessagesContainer.scrollTop , 'scroll height', chatMessagesContainer.scrollHeight  );
 
   });
 
