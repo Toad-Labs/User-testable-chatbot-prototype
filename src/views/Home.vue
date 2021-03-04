@@ -107,7 +107,7 @@
 
                   <tr class="active">
                     <td>23/06/2017</td>
-                    <td>In person</td>
+                    <td class="tw-whitespace-nowrap">In person</td>
                     <td>Oakville, ON, Service Canada Centre</td>
                     <td>Passport application</td>
                     <td class="tw-text-green-600">Application accepted</td>
@@ -139,7 +139,7 @@
 
                   <tr class="active">
                     <td>03/10/2005</td>
-                    <td>In person</td>
+                    <td class="tw-whitespace-nowrap">In person</td>
                     <td>Oakville, ON, Service Canada Centre</td>
                     <td>Social Insurance Number</td>
                     <td class="tw-text-green-600">Application accepted</td>
