@@ -136,12 +136,8 @@ function useChatMessages(userId) {
   // Handler all messages that are posted
   channel.subscribe('message', function(message) {
 
-
-
     // Cache the chat message block
     var chatMessagesContainer =  document.querySelector('.my-chat-messages');
-
-    console.log('B4: scroll top:', chatMessagesContainer.scrollTop , 'B4: scroll height', chatMessagesContainer.scrollHeight  );
 
     // Response adapter for the received message
     var receivedMessage = {
