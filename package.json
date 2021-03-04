@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "ably": "^1.2.4",
+    "ably": "^1.2.6",
     "vue": "^3.0.7",
     "vue-router": "^4.0.4"
   },
