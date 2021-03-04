@@ -6,7 +6,8 @@
       <div
         v-for="(message, index) in messages"
         :key="index"
-        class="chat-message--right tw-m-5 tw-rounded-lg tw-flex tw-flex-row tw-flex-nowrap">
+        class="chat-message tw-m-5 tw-rounded-lg tw-flex tw-flex-row tw-flex-nowrap"
+        :class="{ 'chat-message--right' : message.userId === 0}">
         <div class="chat-message__avatar-frame tw-mr-5">
           <!-- Robot Avatar -->
           <div v-if="message.userId === 0">
