@@ -18,7 +18,7 @@
             <svg height='50px' width='50px' class=" tw-text-gray-400 tw-fill-current"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve"><g><path d="M24,21.334V25v1v1H8v-1v-1v-3.666C8,18.393,10.691,16,14,16h4C21.309,16,24,18.393,24,21.334z M16,15c2.757,0,5-2.243,5-5   s-2.243-5-5-5s-5,2.243-5,5S13.243,15,16,15z"></path></g></svg>
           </div>
         </div>
-        <div class="tw-p-5 tw-bg-white tw-w-full tw-text-3xl tw-rounded-xl"
+        <div class="tw-p-5 tw-bg-white tw-w-full tw-text-2xl tw-rounded-xl"
         :class="{ 'tw-bg-blue-50' : message.userId === 1}">
           {{ message.text }}
         </div>
